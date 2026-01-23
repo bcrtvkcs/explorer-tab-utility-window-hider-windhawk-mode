@@ -21,7 +21,7 @@ This mod hooks the following Windows API functions:
 3. Click "Discover"
 4. Search for "Explorer Tab Utility Window Hider"
 5. Install & activate the mod
-6. Ready to go!
+6. You're all set!
 
 ## Target Action
 This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
