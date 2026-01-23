@@ -18,10 +18,9 @@ This mod hooks the following Windows API functions:
 ## Installation
 1. Download and install [Windhawk](https://windhawk.net/)
 2. Open Windhawk
-3. Click "Create a new mod"
-4. Paste the contents of the `explorer-tab-utility-window-hider.wh.cpp` file into the editor
-5. Click the "Compile" button
-6. Activate the mod
+3. Click "Discover"
+4. Search for "Explorer Tab Utility Window Hider"
+5. Install & activate the mod
 
 ## Target Action
 This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
