@@ -3,8 +3,10 @@
 // @name            Explorer Tab Utility Window Hider
 // @description     Hides the Explorer Tab Utility window completely, allowing it to run only in the background
 // @version         1.0.0
-// @author          Windhawk User
-// @github          https://github.com/user
+// @author          BCRTVKCS
+// @github          https://github.com/bcrtvkcs
+// @twitter         https://x.com/bcrtvkcs
+// @homepage        https://grdigital.pro
 // @include         ExplorerTabUtility.exe
 // ==/WindhawkMod==
 
