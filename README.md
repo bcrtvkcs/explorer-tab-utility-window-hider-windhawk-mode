@@ -1,43 +1,35 @@
 # Explorer Tab Utility Window Hider - Windhawk Mod
+This is a Windhawk mod that prevents w4po's Explorer Tab Utility program (https://github.com/w4po/ExplorerTabUtility) window from appearing and being visible. The program continues to run in the background, but its window never appears.
 
-Explorer Tab Utility programının penceresinin oluşmasını ve görünmesini engelleyen bir Windhawk modudur. Program arka planda çalışmaya devam eder ancak penceresi asla görünmez.
+## Problem
+Explorer Tab Utility normally runs in the background, but sometimes its window becomes visible at computer startup and needs to be manually closed.
 
-## Sorun
+## Solution
+This Windhawk mod completely blocks the Explorer Tab Utility window. The program continues to run in the background with all its functionality, but its configuration window never appears.
 
-Explorer Tab Utility normalde arka planda çalışır, ancak bazen bilgisayar başlangıcında penceresi görünür hale gelir ve manuel olarak kapatılması gerekir.
+## How It Works
+This mod hooks the following Windows API functions:
 
-## Çözüm
+- **ShowWindow / ShowWindowAsync** - Prevents the window from being shown
+- **CreateWindowExW** - Hides the main window immediately after it is created
+- **SetWindowPos** - Prevents the window from being made visible via positioning
+- **SetForegroundWindow / BringWindowToTop** - Prevents the window from being brought to the front
 
-Bu Windhawk modu, Explorer Tab Utility'nin penceresini tamamen engeller. Program tüm işlevselliğiyle arka planda çalışmaya devam eder, ancak yapılandırma penceresi asla görünmez.
+## Installation
+1. Download and install [Windhawk](https://windhawk.net/)
+2. Open Windhawk
+3. Click "Create a new mod"
+4. Paste the contents of the `explorer-tab-utility-window-hider.wh.cpp` file into the editor
+5. Click the "Compile" button
+6. Activate the mod
 
-## Nasıl Çalışır
+## Target Action
+This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
 
-Mod aşağıdaki Windows API fonksiyonlarını hook'lar:
+## Notes
+- The mod hooks multiple Windows API functions to completely block the window.
+- The program continues to run in the background and all functions (shortcuts, Explorer tabs, etc.) work.
+- You need to temporarily disable the mod to make configuration changes.
 
-- **ShowWindow / ShowWindowAsync** - Pencerenin gösterilmesini engeller
-- **CreateWindowExW** - Ana pencereyi oluşturulduktan hemen sonra gizler
-- **SetWindowPos** - Pencerenin konumlandırma yoluyla görünür yapılmasını engeller
-- **SetForegroundWindow / BringWindowToTop** - Pencerenin öne getirilmesini engeller
-
-## Kurulum
-
-1. [Windhawk](https://windhawk.net/)'ı indirin ve kurun
-2. Windhawk'ı açın
-3. "Create a new mod" (Yeni mod oluştur) seçeneğine tıklayın
-4. `explorer-tab-utility-window-hider.wh.cpp` dosyasının içeriğini editöre yapıştırın
-5. "Compile" (Derle) butonuna tıklayın
-6. Modu etkinleştirin
-
-## Hedef İşlem
-
-Bu mod yalnızca `ExplorerTabUtility.exe` işlemini hedefler ve diğer programları etkilemez.
-
-## Notlar
-
-- Mod, pencereyi tamamen engellemek için birden fazla Windows API fonksiyonunu hook'lar
-- Program arka planda çalışmaya devam eder ve tüm işlevler (kısayollar, Explorer sekmeleri vb.) çalışır
-- Yapılandırma değişiklikleri yapmak için modu geçici olarak devre dışı bırakmanız gerekebilir
-
-## Lisans
-
-MIT License
+## License
+All rights reserved. No license specified.
