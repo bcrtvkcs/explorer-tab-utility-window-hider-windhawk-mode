@@ -212,23 +212,23 @@ BOOL WINAPI BringWindowToTop_Hook(HWND hWnd) {
 BOOL Wh_ModInit() {
     Wh_Log(L"Explorer Tab Utility Window Hider initializing...");
 
-    // Hook ShowWindow
-    Wh_SetFunctionHook((void*)ShowWindow, (void*)ShowWindow_Hook, (void**)&ShowWindow_Original);
+    // Hook ShowWindow - using type-safe WindhawkUtils wrapper
+    WindhawkUtils::SetFunctionHook(ShowWindow, ShowWindow_Hook, &ShowWindow_Original);
 
     // Hook ShowWindowAsync
-    Wh_SetFunctionHook((void*)ShowWindowAsync, (void*)ShowWindowAsync_Hook, (void**)&ShowWindowAsync_Original);
+    WindhawkUtils::SetFunctionHook(ShowWindowAsync, ShowWindowAsync_Hook, &ShowWindowAsync_Original);
 
     // Hook CreateWindowExW
-    Wh_SetFunctionHook((void*)CreateWindowExW, (void*)CreateWindowExW_Hook, (void**)&CreateWindowExW_Original);
+    WindhawkUtils::SetFunctionHook(CreateWindowExW, CreateWindowExW_Hook, &CreateWindowExW_Original);
 
     // Hook SetWindowPos
-    Wh_SetFunctionHook((void*)SetWindowPos, (void*)SetWindowPos_Hook, (void**)&SetWindowPos_Original);
+    WindhawkUtils::SetFunctionHook(SetWindowPos, SetWindowPos_Hook, &SetWindowPos_Original);
 
     // Hook SetForegroundWindow
-    Wh_SetFunctionHook((void*)SetForegroundWindow, (void*)SetForegroundWindow_Hook, (void**)&SetForegroundWindow_Original);
+    WindhawkUtils::SetFunctionHook(SetForegroundWindow, SetForegroundWindow_Hook, &SetForegroundWindow_Original);
 
     // Hook BringWindowToTop
-    Wh_SetFunctionHook((void*)BringWindowToTop, (void*)BringWindowToTop_Hook, (void**)&BringWindowToTop_Original);
+    WindhawkUtils::SetFunctionHook(BringWindowToTop, BringWindowToTop_Hook, &BringWindowToTop_Original);
 
     Wh_Log(L"Explorer Tab Utility Window Hider initialized successfully");
     return TRUE;
@@ -236,4 +236,7 @@ BOOL Wh_ModInit() {
 
 void Wh_ModUninit() {
     Wh_Log(L"Explorer Tab Utility Window Hider unloading...");
+
+    // Note: Windhawk automatically unhooks all function hooks when the mod is unloaded
+    // Manual cleanup would go here if needed in the future (e.g., releasing resources)
 }
