@@ -2,7 +2,7 @@
 // @id              explorer-tab-utility-window-hider
 // @name            Explorer Tab Utility Window Hider
 // @description     Hides the Explorer Tab Utility window completely, allowing it to run only in the background
-// @version         1.0.0
+// @version         1.0.1
 // @author          BCRTVKCS
 // @github          https://github.com/bcrtvkcs
 // @twitter         https://x.com/bcrtvkcs
@@ -238,5 +238,4 @@ void Wh_ModUninit() {
     Wh_Log(L"Explorer Tab Utility Window Hider unloading...");
 
     // Note: Windhawk automatically unhooks all function hooks when the mod is unloaded
-    // Manual cleanup would go here if needed in the future (e.g., releasing resources)
 }
