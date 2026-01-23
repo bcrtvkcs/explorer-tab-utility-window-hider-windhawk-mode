@@ -38,6 +38,13 @@ HWND g_mainWindow = NULL;
 bool IsMainAppWindow(HWND hWnd) {
     if (!hWnd) return false;
 
+    // Check if the window belongs to the current process
+    DWORD windowProcessId = 0;
+    GetWindowThreadProcessId(hWnd, &windowProcessId);
+    if (windowProcessId != GetCurrentProcessId()) {
+        return false;
+    }
+
     // Check window class name
     WCHAR className[256];
     if (GetClassNameW(hWnd, className, 256) > 0) {
