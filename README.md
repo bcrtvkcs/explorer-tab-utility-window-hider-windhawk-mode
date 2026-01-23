@@ -1,5 +1,5 @@
 # Explorer Tab Utility Window Hider - Windhawk Mod
-This is a Windhawk mod that prevents w4po's Explorer Tab Utility program (https://github.com/w4po/ExplorerTabUtility) window from appearing and being visible. The program continues to run in the background, but its window never appears.
+This is a Windhawk mod that prevents [w4po](https://github.com/w4po)'s [Explorer Tab Utility](https://github.com/w4po/ExplorerTabUtility) program window from appearing and being visible. The program continues to run in the background, but its window never appears.
 
 ## Problem
 Explorer Tab Utility normally runs in the background, but sometimes its window becomes visible at computer startup and needs to be manually closed.
