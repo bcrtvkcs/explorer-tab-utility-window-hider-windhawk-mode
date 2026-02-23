@@ -26,7 +26,7 @@ This mod hooks the following Windows API functions:
 6. You're all set!
 
 ## Target Process
-This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
+This mod is only for targets the `ExplorerTabUtility.exe` process and does not affect other programs.
 
 ## Notes
 - The mod hooks multiple Windows API functions to completely block the window.
