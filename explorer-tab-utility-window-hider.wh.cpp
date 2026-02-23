@@ -27,7 +27,7 @@ The mod hooks the following Windows API functions:
 
 ## Target Process
 
-This mod only targets `ExplorerTabUtility.exe` and has no effect on other programs.
+This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
 */
 // ==/WindhawkModReadme==
 
