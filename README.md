@@ -22,7 +22,7 @@ This mod hooks the following Windows API functions:
 2. Open Windhawk
 3. Click "Discover"
 4. Search for "Explorer Tab Utility Window Hider"
-5. Install & activate the mod
+5. Install the mod
 6. You're all set!
 
 ## Target Action
