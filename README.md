@@ -25,7 +25,7 @@ This mod hooks the following Windows API functions:
 5. Install the mod
 6. You're all set!
 
-## Target Action
+## Target Process
 This mod is only for Targets the `ExplorerTabUtility.exe` process and does not affect other programs.
 
 ## Notes
